@@ -26,11 +26,11 @@
 	input[type="checkbox"]:checked + label{
 		background-color: seagreen;
 	}
-	button[type="reset"]:focus, button[type="submit"]:focus{
-  border : 2px solid grey;
-  outline:none;
-} 
-button[type="reset"]:hover, button[type="submit"]:hover{
+  input[type="checkbox"]:hover + label{
+    background-color: green;
+  }
+	
+button[type="submit"]:hover{
   border : 2px solid #3a5250;
   background-color: grey;
 }
@@ -39,10 +39,7 @@ input:hover, textarea:hover, select:hover{
   background-color:white;
   border: 2px solid #0163a1;
 }
-input:focus, textarea:focus, select:focus{
-  background-color:white;
-  border-radius: 0px
-}
+
  .required:after { 
  	content:"*"; 
  	color: red;
@@ -54,7 +51,7 @@ input:focus, textarea:focus, select:focus{
 
 <body style="margin: 20px; padding: 10px; background-color: lightgrey;">
 	<header>
-		<div style="background: lightgrey">
+		<div style="background: white">
 			<span>
 				<img src="images/logo.jpg" height="60px" width="60px" alt="Logo Image" style="margin: 5px;">
 			</span>
