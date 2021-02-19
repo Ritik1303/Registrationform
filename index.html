@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" style="background-color: grey;">
+  <head>
+    <title>Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial scale=1">
+    <meta name="description" content="Registration forms">
+    <style>
+    input,textarea,button{
+    	border: 2px solid grey;
+    	background-color: #E2F7FF;
+    	border-radius: 5px;
+    }
+	input[type="checkbox"]{
+		opacity:0;
+		width:0;
+		margin: 0;
+	}
+	input[type="checkbox"] + label{
+		border:1px solid black;
+		background-color: white;
+		padding: 4px 10px 4px 10px;
+		border-radius: 5px;
+		display: inline-block;
+	}
+	input[type="checkbox"]:checked + label{
+		background-color: seagreen;
+	}
+	button[type="reset"]:focus, button[type="submit"]:focus{
+  border : 2px solid grey;
+  outline:none;
+} 
+button[type="reset"]:hover, button[type="submit"]:hover{
+  border : 2px solid #3a5250;
+  background-color: grey;
+}
+
+input:hover, textarea:hover, select:hover{
+  background-color:white;
+  border: 2px solid #0163a1;
+}
+input:focus, textarea:focus, select:focus{
+  background-color:white;
+  border-radius: 0px
+}
+ .required:after { 
+ 	content:"*"; 
+ 	color: red;
+ }
+
+
+</style>
+</head>
+
+<body style="margin: 20px; padding: 10px; background-color: lightgrey;">
+	<header>
+		<div style="background: lightgrey">
+			<span>
+				<img src="images/logo.jpg" height="60px" width="60px" alt="Logo Image" style="margin: 5px;">
+			</span>
+			<span style="float: right;height: 60px; margin: 5px;" >
+				<h1 style=""><strong>Company Name</strong></h1>
+			</span>
+		</div>
+		
+	</header>
+	<br>
+	<main>
+		<form action="success.html" method="get" id="myform" style="margin: 20px;">
+			<div style="margin: 20px;">
+				<span style="float: left">
+					<label class="required" for="firstname">First Name</label>
+        			<input name="firstname" id="firstname" type="text" required style="margin-left: 19px">
+				</span>
+				<span style="margin-left: 60px;">
+	        		<label for="middlename" style="margin-left: 7px;">Middle Name</label>
+    	    		<input name="middlename" id="middlename" type="text">
+				</span>
+				<span style="margin-left: 60px;">
+        			<label class="required" for="lastname">Last Name</label>
+        			<input name="lastname" id="lastname" type="text" required>
+				</span>
+			</div>
+			<div style="margin: 20px;">
+				<span> 
+					<label class="required" for="email">Email</label>
+        			<input name="email" id="email" type="email" required placeholder="me123@example.com" style="margin-left: 55px;"></span>
+				<span style="margin-left: 86px;">
+					<label class="required" for="password">Password</label>
+       			 	<input id="password" name="password" type="password" required>
+				</span>
+				<span style="margin-left: 58px;">
+					<label class="required" for="conpassword">Confirm Password</label>
+       			 	<input id="conpassword" name="conpassword" type="password" required>
+				</span>
+			</div>
+			<div style="margin: 20px;">
+				<span> 
+					<label for="date">Date of Birth</label>
+        			<input id="date" name="date" type="date" min="1998-01-01" style="margin-left: 13px;">
+        		</span>
+        	</div>
+        	<div style="margin: 3px;">
+        		<fieldset style="border: none;">
+         			<legend class="required" >Gender</legend>
+       				<label  for="Gender">Male</label>
+	        		<input id="Gender" name="Gender" type="radio" value="Male" style="margin-right: 30px;">
+    	    		
+    	    		<label for="Gender">Female</label>
+        			<input id="Gender" name="Gender" type="radio" value="Female"style="margin-right: 30px;">
+        			
+        			<label for="Gender">Others</label>
+        			<input id="Gender" name="Gender" type="radio" value="Others">
+       			 </fieldset>
+        	</div>
+        	<div style="margin: 20px;">
+        		<span>
+        			<label class="required" for="phone">Phone Number 1</label>
+        			<input id="phone" name="phone" type="tel" required>
+        		</span>
+        		<span style="margin-left: 40px;">
+        			<label for="phone2">Phone Number 2</label>
+        			<input id="phone2" name="phone2" type="tel">
+        		</span>
+        	</div>
+        	<div>
+        		<span style="float:left; width: 50%;">
+              		<fieldset>
+        				<legend class="required">Permanent Address</legend>
+        				<span>
+        					<label for="textarea"></label>
+        					<textarea id="textarea" name="textarea" cols="21" rows="5" placeholder="Building name/ Street/ Locality" style="margin-top: 3px; margin-left: 70px;" required></textarea>
+        				</span>
+        				<br>
+        				<span>
+        					<label class="required" for="city">City</label>
+        					<input name="city" id="city" type="text" required style="margin-left: 32px; margin-bottom: 3px; margin-top: 3px;">
+        				</span>
+        				<br>
+        				<span>
+        					<label class="required" for="place">State</label>
+       	 <select name="place" id="place" required style="margin-left:27px; margin-bottom: 3px; margin-top: 3px;">
+          <optgroup label="North India">
+          <option value="Kashmir">Kashmir</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          </optgroup>
+          <optgroup label="East India">
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Assam">Assam</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Bihar">Bihar</option>
+          </optgroup>
+          <optgroup label="South India">
+          <option value="Kerala">Kerela</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Maharashtra">Maharastra</option>
+          <option value="Karnataka">Karnataka</option>
+          </optgroup>
+          <optgroup label="West India">
+          <option value="Gujrat">Gujrat</option>
+          <option value="Rajasthan">Rajasthan</option>
+          </optgroup>
+          <optgroup label="Central India">
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Chattishgarh">Chattishgarh</option>
+          </optgroup>
+          <option value="Andaman and Nicobar">Andaman and Nicobar</option>
+          <option value="Lakswadeep">Lakswadeep</option>
+          <option value="Others">Others</option>
+        </select>
+        				</span>
+        				<br>
+        				<span>
+        					<label class="required" for="country">Country</label>
+        					<input name="country" id="country" type="country" required style="margin-left: 5px; margin-bottom: 3px; margin-top: 3px;" placeholder="India">
+        				</span>
+        			</fieldset>
+        		</span>
+        		<span style="width: 50%;">
+        			<fieldset>
+        				<legend>Alternative Address</legend>
+        				<span>
+        					<label for="textarea"></label>
+        					<textarea id="textarea" name="textarea" cols="21" rows="5" placeholder="Building name/ Street/ Locality" style="margin-top: 3px; margin-left: 70px;" required></textarea>
+        				</span>
+        				<br>
+        				<span>
+        					<label class="required" for="city">City</label>
+        					<input name="city" id="city" type="text" required style="margin-left: 32px; margin-bottom: 3px; margin-top: 3px;">
+        				</span>
+        				<br>
+        				<span>
+        					<label class="required" for="place">State</label>
+       	 <select name="place" id="place" required style="margin-left:27px; margin-bottom: 3px; margin-top: 3px;">
+          <optgroup label="North India">
+          <option value="Kashmir">Kashmir</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          </optgroup>
+          <optgroup label="East India">
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Assam">Assam</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Bihar">Bihar</option>
+          </optgroup>
+          <optgroup label="South India">
+          <option value="Kerala">Kerela</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Maharashtra">Maharastra</option>
+          <option value="Karnataka">Karnataka</option>
+          </optgroup>
+          <optgroup label="West India">
+          <option value="Gujrat">Gujrat</option>
+          <option value="Rajasthan">Rajasthan</option>
+          </optgroup>
+          <optgroup label="Central India">
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Chattishgarh">Chattishgarh</option>
+          </optgroup>
+          <option value="Andaman and Nicobar">Andaman and Nicobar</option>
+          <option value="Lakswadeep">Lakswadeep</option>
+          <option value="Others">Others</option>
+        </select>
+        				</span>
+        				<br>
+        				<span>
+        					<label class="required" for="country">Country</label>
+        					<input name="country" id="country" type="country" required style="margin-left: 5px; margin-bottom: 3px; margin-top: 3px;" placeholder="India">
+        				</span>
+        			</fieldset>
+        		</span>
+    		</div>
+        	<br>
+        <div>
+        	<fieldset>
+         		<legend>Select Your Field of Interest</legend>
+         		<input id="sport" name="sport" type="checkbox" value="Sport">
+         		<label for="sport">Sports</label>
+        		
+        		<input id="books" name="books" type="checkbox" value="Books">
+        		<label for="books">Books</label>
+    		    
+    		    <input id="fashion" name="fashion" type="checkbox" value="Fashion">
+      			<label for="fashion">Fashion</label>
+     		    
+     		    <input id="computer" name="computer" type="checkbox" value="Computer">
+      			<label for="computer">Computer</label>
+     		    
+     		    <input id="software" name="software" type="checkbox" value="Software">
+      			<label for="software">Software</label>
+     		    
+     		    <input id="photography" name="photography" type="checkbox" value="Photography">
+      			<label for="photography">Photography</label>
+     		    
+     		    <input id="car" name="car" type="checkbox" value="Car">
+      			<label for="car">Car</label>
+
+      			<input id="food" name="food" type="checkbox" value="Food">
+      			<label for="food">Food</label>
+      		    <br>
+        	</fieldset>
+        </div>
+        <div style="margin: 20px;">
+        		<fieldset style="border: none;">
+         			<legend class="required" >Do you want to subscribe to the new letter?</legend>
+       				<label  for="opt">Yes</label>
+	        		<input id="opt" name="opt" type="radio" value="Yes" style="margin-right: 30px;">
+    	    		
+    	    		<label for="opt">No</label>
+        			<input id="opt" name="opt" type="radio" value="No"style="margin-right: 30px;">
+       			 </fieldset>
+        	</div>
+        <div style="margin: 20px;">
+        	<button type="submit"><strong>Submit</strong></Button>
+        </div>
+		</form>
+	</main>
+</body>
