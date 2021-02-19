@@ -267,7 +267,7 @@ input:focus, textarea:focus, select:focus{
       		    <br>
         	</fieldset>
         </div>
-        <div style="margin: 20px;">
+        <div style="margin: 8px;">
         		<fieldset style="border: none;">
          			<legend class="required" >Do you want to subscribe to the new letter?</legend>
        				<label  for="opt">Yes</label>
@@ -277,9 +277,27 @@ input:focus, textarea:focus, select:focus{
         			<input id="opt" name="opt" type="radio" value="No"style="margin-right: 30px;">
        			 </fieldset>
         	</div>
-        <div style="margin: 20px;">
-        	<button type="submit"><strong>Submit</strong></Button>
+          <div style="margin: 20px">
+                    <label for="time">Enter the time now.</label>
+                    <input id="time" name="time" type="time">
+          </div>
+        
+        <div style="margin: 20px">
+          <label for="color">Select your Favourite Color</label>
+          <input id="color" name="color" type="color">
         </div>
+        <div style="margin: 20px;">
+          <label for="file">Upload your profile picture and Resume</label>
+         <input id="file" name="file" type="file" access="image/*" multiple>
+        </div>
+        <div style="margin: 20px;">
+            <label for="range">Rate my Registration form</label>
+          <input type="range" id="range" min="1" max="10" step="1"> 
+        </div>
+        <div style="margin: 20px;">
+          <button type="submit"><strong>Submit</strong></Button>
+        </div>
+
 		</form>
 	</main>
 </body>
