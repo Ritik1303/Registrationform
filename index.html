@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr" style="background-color: grey;">
+<html lang="en-US" dir="ltr" style="background-color: grey; ">
 	<head>
 		<title>Registration</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, intial scale=1">
 		<meta name="description" content="Registration forms">
+
 		<style>
 		input,textarea,button{
 			border: 2px solid grey;
@@ -28,10 +29,14 @@
 	}
 	input[type="checkbox"]:hover + label{
 		background-color: green;
+		cursor: pointer;
+		font-weight: bold;
+		  transform: translateY(4px);
+
 	}
 	
 button[type="submit"]:hover{
-	border : 2px solid #3a5250;
+	border : 2px solid #3a5250
 	background-color: white;
 }
 
@@ -45,26 +50,57 @@ input:hover, textarea:hover, select:hover{
 	content:"*"; 
 	color: red;
  }
-
-
+ textarea:hover{
+			width: 300px;
+		}
+	button:hover {
+  box-shadow: 0 12px 16px 0 grey;
+}
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 </style>
+<script>
+	function validateForm() {
+  var x = document.getElementById("password").value;
+  var y =document.getElementById("conpassword").value;
+
+  if (x != y) {
+    alert("Password's do not match.");
+    return false;
+  }
+  
+  x = document.getElementById("phone").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x < 1000000000 || x > 9999999999) {
+  	alert("Please enter a valid mobile number.")
+	  } 
+}
+</script>
 </head>
 
-<body style="margin: 20px; padding: 10px; background-color: lightgrey;">
+<body style="margin: 30px; padding: 20px; background-color: lightgrey;border-radius: 15px;">
 	<header>
-		<div style="background: white">
+		<div style="background-image: linear-gradient(black,lightgrey,lightgrey,white,lightgrey, lightgrey,black);">
 			<span>
 				<img src="images/logo.jpg" height="60px" width="60px" alt="Logo Image" style="margin: 5px;">
 			</span>
-			<span style="float: right;height: 60px; margin: 5px;" >
-				<h1 style=""><strong>Company Name</strong></h1>
+			
+			<span style="float: right;height: 60px; margin-right: 20px;margin-top: -10px;" >
+				<h1 style="font-size: 2em"><strong>Company Name</strong></h1>
 			</span>
 		</div>
 		
 	</header>
 	<br>
 	<main>
-		<form action="" method="get" id="myform" style="margin: 20px;">
+		<div style="margin: 30px;color: black; text-shadow: 10px 10px 10px white;">
+					<h1 >Registration Form</h1>
+		</div>
+		<form action="" method="post" id="myform" name="myform" onsubmit="return validateForm()" style="margin: 20px;">
 
 			<div style="margin: 20px;">
 				<span style="float: left">
